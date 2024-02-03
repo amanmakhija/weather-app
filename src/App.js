@@ -39,9 +39,9 @@ function App() {
         // Random number between 0 to 19
         const random = Math.floor(Math.random() * 20);
 
-        setImageUrl(imageResponse.results[random].image);
         setcurrentWeather({ city: searchData.label, ...weatherResponse });
         setForeCast({ city: searchData.label, ...forecastResponse });
+        setImageUrl(imageResponse.results[random].image);
       })
       .catch((err) => console.log(err));
   }
